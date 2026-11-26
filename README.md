@@ -1,3 +1,3 @@
 # testa
 testing
-<svg/onload=prompt(4)?
+<svg/onload=prompt(4)>

